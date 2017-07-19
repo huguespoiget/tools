@@ -47,6 +47,7 @@ set nocompatible "Disables compatibility with vi
 set title "Updates the window title
 set ruler "Prints the cursor position
 set number              " show line numbers
+set rnu " print relative line numbers instead of absolute
 set scrolloff=3 "Prints a minimum of 3 lines around cursor
 syntax on
 syntax enable           " enable syntax processingi
@@ -67,7 +68,8 @@ inoremap jk <esc>
 " toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
 "Set colorcolumn color to grey
-highlight ColorColumn ctermbg=8 "Set colorcolumn color to grey
+highlight ColorColumn ctermbg=8
+
 set colorcolumn=81 "Sets colored column 81
 "Set autoplete mode to zshlike
 set wildmode=longest:full,full
@@ -93,4 +95,5 @@ command Wa wa
 command QA qa
 command Qa qa
 
-imap jj <Esc> "map jj in insert mode ('imap')
+"map jj in insert mode ('imap')
+imap jj <Esc>
