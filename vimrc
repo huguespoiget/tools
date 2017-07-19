@@ -97,3 +97,6 @@ command Qa qa
 
 "map jj in insert mode ('imap')
 imap jj <Esc>
+
+"Deactivates expandtab for makefiles
+autocmd FileType make setlocal noexpandtab
