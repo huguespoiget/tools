@@ -1,4 +1,6 @@
 # tools
 Several tools I use on a daily basis or I found very useful
 
-- .vimrc
+- .vimrc 
+    cf. https://github.com/etrobert and 
+    https://dougblack.io/words/a-good-vimrc.html
