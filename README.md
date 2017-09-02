@@ -7,3 +7,9 @@ Several tools I use on a daily basis or I found very useful
 
 - colorsMacTerm.terminal  
     Terminal profil I use under Mac OS
+
+- .bashrc
+    Bash file config
+
+- .bash_profile
+    Bash file config
