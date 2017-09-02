@@ -9,23 +9,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
@@ -43,10 +27,9 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-set nocompatible "Disables compatibility with vi
 set title "Updates the window title
 set ruler "Prints the cursor position
-set number              " show line numbers
+set number " print line numbers
 set rnu " print relative line numbers instead of absolute
 set scrolloff=3 "Prints a minimum of 3 lines around cursor
 syntax on
@@ -97,6 +80,27 @@ command Qa qa
 
 "map jj in insert mode ('imap')
 imap jj <Esc>
+"Prints the Scortex header whenever you open a new file
+function! s:insert_header()
+  execute "normal! i/**"
+  execute "normal! o\<BS>* Copyright (c) 2017 Scortex SAS"
+  execute "normal! o*/"
+  normal! o
+endfunction
+autocmd BufNewFile *.{h,c,hpp,cpp,js} call <SID>insert_header()
 
-"Deactivates expandtab for makefiles
-autocmd FileType make setlocal noexpandtab
+function! s:insert_header_py()
+  execute "normal! i\"\"\""
+  execute "normal! oCopyright (c) 2017 Scortex SAS"
+  execute "normal! o\"\"\""
+  normal! o
+endfunction
+autocmd BufNewFile *.{py} call <SID>insert_header_py()
+
+function! s:insert_header_make()
+  execute "normal! i#"
+  execute "normal! o# Copyright (c) 2017 Scortex SAS"
+  execute "normal! o#"
+  normal! o
+endfunction
+autocmd BufNewFile ?akefile* call <SID>insert_header_make()
