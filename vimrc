@@ -27,6 +27,9 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+"Sets color theme
+colorscheme Tomorrow-Night
+
 set title "Updates the window title
 set ruler "Prints the cursor position
 set number " print line numbers
@@ -67,7 +70,6 @@ inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 
-"tbeldame adds
 "Sets some uppercase commands to the lowercase equivalent
 command WQ wq
 command Wq wq
