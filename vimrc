@@ -35,6 +35,7 @@ set ruler "Prints the cursor position
 set number " print line numbers
 set rnu " print relative line numbers instead of absolute
 set scrolloff=3 "Prints a minimum of 3 lines around cursor
+set backspace=indent,eol
 syntax on
 syntax enable           " enable syntax processingi
 set tabstop=4       " number of visual spaces per TAB
