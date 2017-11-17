@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'elzr/vim-json'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,7 +58,7 @@ nnoremap <leader>u :GundoToggle<CR>
 "Set colorcolumn color to grey
 highlight ColorColumn ctermbg=8
 
-set colorcolumn=81 "Sets colored column 81
+set colorcolumn=80 "Sets colored column 80
 "Set autoplete mode to zshlike
 set wildmode=longest:full,full
 "Disables arrow keys
