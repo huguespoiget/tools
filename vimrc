@@ -12,6 +12,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'elzr/vim-json'
+Plugin 'nvie/vim-flake8'
+Plugin 'nikvdp/ejs-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -34,7 +36,6 @@ colorscheme Tomorrow-Night
 set title "Updates the window title
 set ruler "Prints the cursor position
 set number " print line numbers
-set rnu " print relative line numbers instead of absolute
 set scrolloff=3 "Prints a minimum of 3 lines around cursor
 set backspace=indent,eol
 syntax on
