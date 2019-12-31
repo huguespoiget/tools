@@ -9,11 +9,17 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'elzr/vim-json'
 Plugin 'nvie/vim-flake8'
 Plugin 'nikvdp/ejs-syntax'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'tpope/vim-surround'
+Plugin 'junegunn/rainbow_parentheses.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -59,7 +65,7 @@ nnoremap <leader>u :GundoToggle<CR>
 "Set colorcolumn color to grey
 highlight ColorColumn ctermbg=8
 
-set colorcolumn=80 "Sets colored column 80
+set colorcolumn=89 "Sets colored column 89
 "Set autoplete mode to zshlike
 set wildmode=longest:full,full
 "Disables arrow keys
@@ -88,15 +94,15 @@ imap jj <Esc>
 "Prints the Scortex header whenever you open a new file
 function! s:insert_header()
   execute "normal! i/**"
-  execute "normal! o\<BS>* Copyright (c) 2017 Scortex SAS"
-  execute "normal! o*/"
+  execute "normal! o\<BS> Copyright (c) 2020 Scortex SAS"
+  execute "normal! o/"
   normal! o
 endfunction
 autocmd BufNewFile *.{h,c,hpp,cpp,js} call <SID>insert_header()
 
 function! s:insert_header_py()
   execute "normal! i\"\"\""
-  execute "normal! oCopyright (c) 2017 Scortex SAS"
+  execute "normal! oCopyright (c) 2020 Scortex SAS"
   execute "normal! o\"\"\""
   normal! o
 endfunction
@@ -104,7 +110,7 @@ autocmd BufNewFile *.{py} call <SID>insert_header_py()
 
 function! s:insert_header_make()
   execute "normal! i#"
-  execute "normal! o# Copyright (c) 2017 Scortex SAS"
+  execute "normal! o# Copyright (c) 2020 Scortex SAS"
   execute "normal! o#"
   normal! o
 endfunction
