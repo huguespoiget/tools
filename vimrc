@@ -20,6 +20,7 @@ Plugin 'nikvdp/ejs-syntax'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'junegunn/rainbow_parentheses.vim'
+Plugin 'davidhalter/jedi-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
