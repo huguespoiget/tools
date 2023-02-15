@@ -1,26 +1,32 @@
 # tools
 Several tools I use on a daily basis or I found very useful
 
-- .vimrc 
+- .vimrc  
     cf. https://github.com/etrobert and 
     https://dougblack.io/words/a-good-vimrc.html
 
 - colorsMacTerm.terminal  
     Terminal profil I use under Mac OS
 
-- .bashrc
+- .bashrc  
     Bash file config
 
-- .bash_profile
+- .bash_profile  
     Bash file config
+
+- .zshrc  
+    Zsh file config
 
 # install
 
-To install vundle follow:
+Step 1 - Install vundle following:
 https://github.com/VundleVim/Vundle.vim
 
-To install Tomorrow-Night theme:
+Step 2 - Replace current config:
+
+`chmod +x ~/tools/deploy.sh && ~/tools/deploy.sh`
+
+Credits:
 https://github.com/chriskempson/vim-tomorrow-theme
 It's a deprecated repository, didn't manage yet to install it through base16 new repo
-so I provide the color scheme in this repo, just do:
-cp Tomorrow-Night.vim ~/.vim/colors/
+so I provide the color scheme in this repo.
