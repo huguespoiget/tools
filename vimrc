@@ -94,7 +94,7 @@ imap jj <Esc>
 "Prints the Scortex header whenever you open a new file
 function! s:insert_header()
   execute "normal! i/**"
-  execute "normal! o\<BS> Copyright (c) 2020 Scortex SAS"
+  execute "normal! o\<BS> Copyright (c) 2023 Scortex SAS"
   execute "normal! o/"
   normal! o
 endfunction
@@ -102,7 +102,7 @@ autocmd BufNewFile *.{h,c,hpp,cpp,js} call <SID>insert_header()
 
 function! s:insert_header_py()
   execute "normal! i\"\"\""
-  execute "normal! oCopyright (c) 2020 Scortex SAS"
+  execute "normal! oCopyright (c) 2023 Scortex SAS"
   execute "normal! o\"\"\""
   normal! o
 endfunction
@@ -110,7 +110,7 @@ autocmd BufNewFile *.{py} call <SID>insert_header_py()
 
 function! s:insert_header_make()
   execute "normal! i#"
-  execute "normal! o# Copyright (c) 2020 Scortex SAS"
+  execute "normal! o# Copyright (c) 2023 Scortex SAS"
   execute "normal! o#"
   normal! o
 endfunction
